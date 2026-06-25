@@ -1,0 +1,29 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: categoria-service
+
+  datasource:
+    # Crea 'categoria_db' automáticamente en XAMPP y optimiza la conexión
+    url: jdbc:mysql://localhost:3306/categoria_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=America/Santiago
+    username: root
+    password: 
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    # Formatea el SQL en consola para un desarrollo más cómodo
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  # Registro óptimo en Eureka mediante dirección IP
+  instance:
+    prefer-ip-address: true

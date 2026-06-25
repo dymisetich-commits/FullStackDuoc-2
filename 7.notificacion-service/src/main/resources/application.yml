@@ -1,0 +1,29 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: notificacion-service
+
+  datasource:
+    # Crea 'notificacion_db' automáticamente en XAMPP y optimiza la conexión
+    url: jdbc:mysql://localhost:3306/notificacion_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=America/Santiago
+    username: root
+    password: 
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    # Formatea el SQL en consola para que sea fácil de leer
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  # Registro óptimo en Eureka mediante dirección IP
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,29 @@
+server:
+  port: 8091
+
+spring:
+  application:
+    name: sucursal-service
+
+  datasource:
+    # Crea 'sucursal_db' automáticamente en XAMPP y remueve advertencias
+    url: jdbc:mysql://localhost:3306/sucursal_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=America/Santiago
+    username: root
+    password: 
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    # Activa la visualización ordenada de las consultas de bases de datos
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  # Registra el microservicio en Eureka usando su dirección IP
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: restaurante-service
+
+  datasource:
+    # Se añade 'createDatabaseIfNotExist=true' para que XAMPP cree 'restaurante_db' automáticamente
+    # También incluimos 'useSSL=false' y la zona horaria para limpiar la consola de advertencias
+    url: jdbc:mysql://localhost:3306/restaurante_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=America/Santiago
+    username: root
+    password: 
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    # Activa el formato ordenado y legible para las consultas SQL en la consola
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  # Configuración recomendada para que el microservicio se registre en Eureka usando la IP
+  instance:
+    prefer-ip-address: true

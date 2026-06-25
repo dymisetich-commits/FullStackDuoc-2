@@ -1,0 +1,30 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: pedido-service
+
+  datasource:
+    # Automatiza la creación de 'pedido_db' en XAMPP y limpia advertencias de SSL/Zona horaria
+    url: jdbc:mysql://localhost:3306/pedido_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=America/Santiago
+    username: root
+    password: 
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    # Formatea el SQL en consola para que sea fácil de leer
+    properties:
+      hibernate:
+        format_sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  # Ayuda a Eureka a registrar el microservicio usando la IP
+  instance:
+    prefer-ip-address: true
+      

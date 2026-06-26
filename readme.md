@@ -16,19 +16,10 @@ los swaager de los microservicios
 
 
 ---------------------------------------------------
-debe tener el readme estas cosas: 
-
-Integrantes
-Arquitectura
-Cómo ejecutar
-Orden de arranque
-Bases de datos
-Eureka
-Swagger
-Gateway
-Link del video
-
-
+Integrantes:
+Patricio Muñoz Huinca
+Suimey Flores Garcia
+Dylan Misetich Riquelme
 ---------------------------------------------------------
 
 

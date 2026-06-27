@@ -1,2 +1,2 @@
 # FullStackDuoc-2
-Codigo fullstack
+Codigo fullstack rama "master"

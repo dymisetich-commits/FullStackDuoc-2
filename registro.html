@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Gamer | Registro de Usuario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Site Name</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html" class="active">Registrar usuario</a>
+            <a href="carrito.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <div class="form-box">
+            <h3>Registro de usuario</h3>
+
+            <form id="form-registro" novalidate>
+                <div class="form-group">
+                    <label for="reg-run">RUN (Sin puntos ni guion, Ej: 19011022K)</label>
+                    <input type="text" id="reg-run" maxlength="9">
+                    <span class="error-msg" id="error-reg-run"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-nombre">NOMBRE</label>
+                    <input type="text" id="reg-nombre" maxlength="50">
+                    <span class="error-msg" id="error-reg-nombre"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-apellidos">APELLIDOS</label>
+                    <input type="text" id="reg-apellidos" maxlength="100">
+                    <span class="error-msg" id="error-reg-apellidos"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-correo">CORREO</label>
+                    <input type="email" id="reg-correo" maxlength="100">
+                    <span class="error-msg" id="error-reg-correo"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-direccion">DIRECCIÓN</label>
+                    <input type="text" id="reg-direccion" maxlength="300">
+                    <span class="error-msg" id="error-reg-direccion"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="select-region">REGIÓN</label>
+                        <select id="select-region">
+                            <option value="">- Seleccione la región -</option>
+                        </select>
+                        <span class="error-msg" id="error-select-region"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="select-comuna">COMUNA</label>
+                        <select id="select-comuna" disabled>
+                            <option value="">- Seleccione la comuna -</option>
+                        </select>
+                        <span class="error-msg" id="error-select-comuna"></span>
+                    </div>
+                </div>
+                <!-- Nuevos campos de contraseña agregados a tu registro original -->
+                <div class="form-group">
+                    <label for="reg-pass">Contraseña</label>
+                    <input type="password" id="reg-pass" placeholder="Crea una contraseña (mín. 6 caracteres)">
+                    <span class="error-msg" id="error-pass"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-pass2">Confirmar Contraseña</label>
+                    <input type="password" id="reg-pass2" placeholder="Repite tu contraseña">
+                    <span class="error-msg" id="error-pass2"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">REGISTRAR</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Site Name</div>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

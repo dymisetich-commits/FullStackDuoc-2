@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerZone | Tienda de Videojuegos</title>
+    <!-- Hoja de estilos CSS externa -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/gamer zone1.jpg" alt="GamerZone Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-icon">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <main>
+        <!-- Banner de bienvenida -->
+        <section class="hero">
+            <div class="hero-text">
+                <h2>TIENDA GAMER</h2>
+                <p>Encuentra los mejores títulos para PlayStation, Xbox, Nintendo Switch y PC con entrega inmediata.</p>
+                <a href="#productos-destacados" class="btn-primary">Ver catálogo</a>
+            </div>
+            <div class="hero-image">
+            <div class="carousel">
+                <div class="carousel-slide active">
+                    <img src="img/The Legend of ZeldaTears of the Kingdom.avif" alt="Banner 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/God of War Ragnarök.webp" alt="Banner 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Elden Ring.webp" alt="Banner 3">
+                </div>
+                <div class="carousel-slide">
+                    <img src="img/Halo Infinite1.webp" alt="Banner 4">
+                </div>
+
+                <!-- Botones para cambiar imagen manual -->
+                <button class="carousel-btn prev" onclick="cambiarSlide(-1)">&#10094;</button>
+                <button class="carousel-btn next" onclick="cambiarSlide(1)">&#10095;</button>
+            </div>
+        </div>
+        </section>
+
+        <!-- SECCIÓN DE PRODUCTOS DESTACADOS -->
+        <section class="productos-destacados" id="productos-destacados">
+            <h3>Juegos Destacados</h3>
+            <div class="grid-productos" id="contenedor-productos">
+                <!-- JavaScript renderiza automáticamente las tarjetas de los juegos aquí -->
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">GamerZone</div>
+            <div class="footer-links">
+                <a href="#">PlayStation</a> | 
+                <a href="#">Xbox</a> | 
+                <a href="#">Nintendo</a> |
+                <a href="#">PC Gaming</a>
+            </div>
+            <div class="footer-newsletter">
+                <p>Recibe ofertas y promociones exclusivas:</p>
+                <form action="#" onsubmit="return false;">
+                    <input type="email" placeholder="Ingresa tu correo">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vincular archivos JavaScript al final de la página -->
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

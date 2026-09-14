@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Gamer | Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h1>Site Name</h1></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-icon">🛒 Cart (<span id="cart-count">0</span>)</a>
+        </div>
+    </header>
+
+    <main class="form-container">
+        <div class="form-box">
+            <div class="form-header">
+                <div class="placeholder-logo">Logo Empresa</div>
+                <h2>Nombre Empresa</h2>
+                <h3>FORMULARIO DE CONTACTO</h3>
+            </div>
+
+            <form id="form-contacto" novalidate>
+                <div class="form-group">
+                    <label for="contacto-nombre">NOMBRE COMPLETO</label>
+                    <input type="text" id="contacto-nombre" maxlength="100">
+                    <span class="error-msg" id="error-contacto-nombre"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="contacto-correo">CORREO</label>
+                    <input type="email" id="contacto-correo" maxlength="100">
+                    <span class="error-msg" id="error-contacto-correo"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="contacto-comentario">COMENTARIO / MENSAJE</label>
+                    <textarea id="contacto-comentario" rows="5" maxlength="500"></textarea>
+                    <span class="error-msg" id="error-contacto-comentario"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">ENVIAR MENSAJE</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Site Name</div>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

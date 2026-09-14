@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Gamer | Carrito de Compras</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="logo">
+    <!-- Reemplaza "logo.png" por el nombre real de tu archivo -->
+    <a href="index.html">
+        <img src="img/logo.png" alt="Logo GamerZone" class="logo-img">
+    </a>
+</div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-icon">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <!-- CONTENIDO DEL CARRITO -->
+    <main>
+        <h2>Mi carrito de compras</h2>
+        <div class="cart-layout">
+            <!-- Listado de items del carrito -->
+            <div class="cart-items" id="contenedor-carrito">
+                <!-- Se genera dinámicamente desde JavaScript -->
+            </div>
+
+            <!-- Resumen de Pago -->
+            <div class="cart-summary">
+                <h3>TOTAL: <span id="total-compra">$0</span></h3>
+                <div class="coupon-box">
+                    <input type="text" placeholder="Ingresa el cupón de descuento">
+                    <button type="button">APLICAR</button>
+                </div>
+                <button class="btn-pagar" onclick="procesarPago()">PAGAR</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Site Name</div>
+            <div class="footer-links">
+                <a href="#">Categoría X</a> | 
+                <a href="#">Categoría Y</a> | 
+                <a href="#">Categoría Z</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

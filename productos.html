@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerZone | Catálogo de Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="GamerZone Logo" class="logo-img">
+            </a>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html" class="active">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="user-actions">
+            <a href="login.html">Iniciar sesión</a> | 
+            <a href="registro.html">Registrar usuario</a>
+            <a href="carrito.html" class="cart-icon">
+                🛒 Cart (<span id="cart-count">0</span>)
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="productos-destacados">
+            <h2>Catálogo Completo de Juegos</h2>
+            <div class="grid-productos" id="contenedor-productos">
+                <!-- Se renderizan automáticamente los juegos desde JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">GamerZone</div>
+            <div class="footer-links">
+                <a href="#">PlayStation</a> | 
+                <a href="#">Xbox</a> | 
+                <a href="#">Nintendo</a> |
+                <a href="#">PC Gaming</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

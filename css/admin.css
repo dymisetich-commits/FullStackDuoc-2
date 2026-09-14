@@ -1,0 +1,50 @@
+/* ============================================
+   ADMIN.CSS
+   Tabla y acciones del panel de administración
+   (admin-productos.html)
+   ============================================ */
+
+.table-responsive {
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-borde);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.admin-table th {
+    background-color: var(--color-fondo-input);
+    color: var(--color-texto-suave);
+    font-weight: 700;
+}
+
+.btn-accion {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+}
+
+.btn-editar {
+    background-color: var(--color-advertencia);
+    margin-right: 5px;
+}
+
+.btn-eliminar-admin {
+    background-color: var(--color-error);
+}

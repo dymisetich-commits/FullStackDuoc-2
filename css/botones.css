@@ -1,0 +1,27 @@
+/* ============================================
+   BOTONES.CSS
+   Botones reutilizables en todo el sitio
+   ============================================ */
+
+.btn-primary,
+.btn-submit,
+.btn-pagar {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--color-azul-principal);
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-submit:hover,
+.btn-pagar:hover {
+    background-color: var(--color-azul-hover);
+}

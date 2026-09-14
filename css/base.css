@@ -1,0 +1,53 @@
+/* ============================================
+   BASE.CSS
+   Variables globales, reset y estilos del <body>
+   ============================================ */
+
+:root {
+    /* Colores de marca */
+    --color-azul-gamer: #60a5fa;
+    --color-azul-principal: #2563eb;
+    --color-azul-hover: #1d4ed8;
+    --color-azul-oscuro: #1e3a8a;
+
+    /* Neutros / superficies */
+    --color-fondo: #f3f4f6;
+    --color-texto: #1f2937;
+    --color-texto-suave: #374151;
+    --color-texto-gris: #6b7280;
+    --color-borde: #e5e7eb;
+    --color-borde-input: #d1d5db;
+    --color-fondo-input: #f9fafb;
+
+    /* Header / footer (dark) */
+    --color-dark: #111827;
+    --color-dark-texto: #d1d5db;
+    --color-dark-borde: #1f2937;
+    --color-dark-texto-suave: #9ca3af;
+
+    /* Estados */
+    --color-exito: #16a34a;
+    --color-error: #ef4444;
+    --color-advertencia: #f59e0b;
+
+    /* Tipografía */
+    --fuente-principal: 'Inter', system-ui, sans-serif;
+}
+
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-principal);
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+main {
+    padding: 40px 5%;
+}

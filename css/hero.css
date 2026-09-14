@@ -1,0 +1,47 @@
+/* ============================================
+   HERO.CSS
+   Banner principal de bienvenida (index.html)
+   ============================================ */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, var(--color-azul-oscuro) 0%, #3b82f6 100%);
+    color: white;
+    padding: 60px;
+    border-radius: 16px;
+    margin-bottom: 50px;
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2);
+}
+
+.hero-text {
+    width: 55%;
+}
+
+.hero-text h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #bfdbfe;
+}
+
+.hero-image .placeholder-img {
+    width: 350px;
+    height: 220px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    backdrop-filter: blur(5px);
+}

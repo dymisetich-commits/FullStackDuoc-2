@@ -1,0 +1,89 @@
+/* ============================================
+   CARRITO.CSS
+   Página del carrito de compras (carrito.html)
+   ============================================ */
+
+.cart-layout {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.cart-items {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.item-carrito img {
+    width: 100px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.info-item {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-fondo);
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.controles-cantidad button {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid var(--color-borde-input);
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-eliminar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 20px;
+    transition: transform 0.2s;
+}
+
+.btn-eliminar:hover {
+    transform: scale(1.1);
+}
+
+.cart-summary {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    height: fit-content;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.cart-summary h3 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 15px;
+}

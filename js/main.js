@@ -32,6 +32,7 @@ function actualizarContadorCarrito() {
 }
 
 // --- RENDERIZADO DE PRODUCTOS ---
+// Renderizar tarjetas (ahora las imágenes y títulos llevan al detalle)
 function mostrarProductos() {
     const contenedor = document.getElementById('contenedor-productos');
     if (!contenedor) return;
@@ -46,9 +47,11 @@ function mostrarProductos() {
         tarjeta.classList.add('card-producto');
 
         tarjeta.innerHTML = `
-            <img src="${juego.imagen}" alt="${juego.nombre}">
-            <h4>${juego.nombre}</h4>
-            <p class="plataforma">${juego.plataforma}</p>
+            <a href="producto.html?id=${juego.id}" style="text-decoration: none; color: inherit;">
+                <img src="${juego.imagen}" alt="${juego.nombre}">
+                <h4>${juego.nombre}</h4>
+                <p class="plataforma">${juego.plataforma}</p>
+            </a>
             <p class="precio">$${juego.precio.toLocaleString('es-CL')}</p>
             <button class="btn-primary" onclick="agregarAlCarrito(${juego.id})">Añadir al carrito</button>
         `;
@@ -320,3 +323,55 @@ function cerrarSesion() {
     alert('Has cerrado sesión.');
     window.location.reload();
 }
+// --- LÓGICA PARA LA PÁGINA DE DETALLE DE PRODUCTO ---
+function cargarDetalleProducto() {
+    const contenedorDetalle = document.getElementById('contenedor-detalle-producto');
+    if (!contenedorDetalle) return; // Si no estamos en producto.html, no hace nada
+
+    // 1. Leer el ID desde la URL (ej: producto.html?id=2)
+    const urlParams = new URLSearchParams(window.location.search);
+    const idProducto = parseInt(urlParams.get('id'));
+
+    // 2. Buscar el producto en la base de datos
+    const catalogoGuardado = localStorage.getItem('catalogo_productos');
+    const listaJuegos = catalogoGuardado ? JSON.parse(catalogoGuardado) : productos;
+    const producto = listaJuegos.find(p => p.id === idProducto);
+
+    // 3. Renderizar la información
+    if (!producto) {
+        contenedorDetalle.innerHTML = '<h2>Producto no encontrado</h2>';
+        return;
+    }
+
+    // Estructura similar a tiendas como SP Digital
+    contenedorDetalle.innerHTML = `
+        <div class="detalle-grid">
+            <div class="detalle-img-box">
+                <img src="${producto.imagen}" alt="${producto.nombre}" class="detalle-img">
+            </div>
+            
+            <div class="detalle-info-box">
+                <span class="plataforma">${producto.plataforma}</span>
+                <h1>${producto.nombre}</h1>
+                <p class="precio-detalle">$${producto.precio.toLocaleString('es-CL')}</p>
+                
+                <div class="metodos-pago">
+                    <p>💳 Pago con tarjetas de crédito/débito</p>
+                    <p>🚚 Despacho a todo Chile</p>
+                </div>
+
+                <button class="btn-primary btn-lg" onclick="agregarAlCarrito(${producto.id})">Añadir al carrito 🛒</button>
+                
+                <div class="descripcion-box">
+                    <h3>Descripción</h3>
+                    <p>${producto.descripcion || 'No hay descripción disponible para este producto.'}</p>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// 4. Asegurarnos de que se ejecute al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    cargarDetalleProducto(); // Agregamos esta línea a tu DOMContentLoaded existente
+});

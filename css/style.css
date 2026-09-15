@@ -519,3 +519,37 @@ footer {
 .carousel-btn.next {
     right: 10px;
 }
+
+/* PÁGINA DE DETALLE DE PRODUCTO */
+.detalle-grid {
+    display: grid;
+    /* Forzamos que sean siempre 2 columnas iguales y evitamos que contenido muy grande las rompa */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); 
+    gap: 50px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    align-items: start; /* Evita que la columna de texto se estire a lo alto de la imagen */
+}
+
+/* Creamos una caja contenedora tipo "estudio fotográfico" para el juego */
+.detalle-img-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8fafc; /* Un fondo gris súper claro para resaltar la imagen */
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+/* Estandarizamos el tamaño de la imagen */
+.detalle-img-box img {
+    width: 100%;
+    max-width: 400px; /* El ancho máximo no pasará de esto */
+    height: 400px;    /* Altura fija estandarizada para todos los juegos */
+    object-fit: contain; /* MAGIA: Ajusta la foto sin recortarla ni deformarla */
+    mix-blend-mode: multiply; /* (Opcional) Ayuda a fundir fondos blancos de fotos jpg con el fondo de la caja */
+}

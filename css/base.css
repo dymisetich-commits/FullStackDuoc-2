@@ -1,6 +1,6 @@
 /* ============================================
-   BASE.CSS
-   Variables globales, reset y estilos del <body>
+BASE.CSS
+Variables globales, reset y estilos del <body>
    ============================================ */
 
 :root {
@@ -50,4 +50,10 @@ body {
 
 main {
     padding: 40px 5%;
+}
+
+.logo-img-perfil{
+    width: 100%;       
+    max-width: 350px; 
+    height: auto;
 }
